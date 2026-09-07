@@ -6,8 +6,14 @@
     color: white;
 }
 
+:root {
+    --border-radius: 15px;
+    --homepage-font: 40px;
+}
+
 body {
     background: url(./assets/images/background.svg);
+    background-size: cover;                 /*Need to correct this*/
 }
 
 header {
@@ -71,4 +77,52 @@ footer {
 }
 .footer-logos img {
     width: 30px;
+}
+
+.main-content {
+    height: 540px;
+}
+
+.homepage-container {
+    display: grid;
+    grid-template-columns: 350px 500px;
+    width: 890px;
+    height: 500px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.homepage-column-one {
+    background: url(./assets/images/homepage-menu-background.svg);
+    background-size: contain;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--homepage-font);
+}
+
+.homepage-column-two {
+    display: grid;
+    grid-template-rows: 230px 230px;
+    gap: 40px;
+    height: 500px;
+}
+
+.homepage-find-us,
+.homepage-about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--homepage-font);
+    border-radius: var(--border-radius);
+    background-size: contain;
+}
+
+.homepage-find-us {
+    background: url(./assets/images/homepage-find-us-background.svg);
+}
+
+.homepage-about-us {
+    background: url(./assets/images/homepage-about-us-background.svg);
 }
