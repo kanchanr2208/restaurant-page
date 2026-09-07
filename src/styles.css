@@ -181,7 +181,7 @@ footer {
 
 .menu-card-title {
     font-family: var(--primaryFont);
-    line-height: 30px;
+    line-height: 30px;                /*Needs to be standardized*/
     font-weight: 400;
     font-size: 24px;                /*Needs to be standardized*/
 }
@@ -200,4 +200,36 @@ footer {
 
 .dish-desc {
     font-size: 12px;                /*Needs to be standardized*/
+}
+
+
+.about-us-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 890px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+.about-us-card {
+    padding-bottom: 30px;
+}
+
+.about-us-card h3 {
+    font-family: var(--primaryFont);
+    font-size: 24px;                /*Needs to be standardized*/
+    line-height: 30px;              /*Needs to be standardized*/
+
+}
+
+.about-us-card p {
+    font-family: var(--secondaryFont);
+    font-size: 16px;                /*Needs to be standardized*/
+    line-height: 26px;              /*Needs to be standardized*/
+}
+
+.about-us-image {
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }

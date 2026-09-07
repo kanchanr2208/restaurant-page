@@ -9,11 +9,11 @@ loadHeader();
 const mainContent = document.createElement("div")
 mainContent.classList.add("main-content")
 mainContent.id = "main-content"
-// mainContent.textContent = "Main Content"
+mainContent.textContent = "Main Content"
 document.body.append(mainContent)
 
 // mainContent.append(loadHomepageContent())
-mainContent.append(loadMenuContent())
+// mainContent.append(loadMenuContent())
 
 
 loadFooter();
