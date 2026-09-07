@@ -9,6 +9,8 @@
 :root {
     --border-radius: 15px;
     --homepage-font: 40px;
+    --primaryFont: 'Tenor Sans', sans-serif;
+    --secondaryFont: 'Barlow', sans-serif;
 }
 
 @font-face {
@@ -32,10 +34,10 @@ body {
 
 header {
     width: 100%;
-    height: 100px;
+    height: 80px;
     display: flex;
     flex-direction: row;
-    padding: 0 30px;
+    padding: 5px 30px;
     align-items: center;
     justify-content: space-between;
 }
@@ -61,7 +63,7 @@ nav button {
     text-decoration: none;
     cursor: pointer;
     font-size: 24px;                /*Need standardized font sizes in variable names*/
-    font-family: 'Tenor Sans', sans-serif;
+    font-family: var(--primaryFont);
 }
 
 footer {
@@ -72,7 +74,7 @@ footer {
     justify-content: center;
     position:relative;
     height: 50px;
-    font-family: 'Barlow', sans-serif;
+    font-family: var(--secondaryFont);
 }
 
 .footer-logos {
@@ -96,7 +98,7 @@ footer {
 }
 
 .main-content {
-    height: 540px;
+    height: 560px;
 }
 
 .homepage-container {
@@ -106,7 +108,7 @@ footer {
     height: 500px;
     margin: 0 auto;
     gap: 40px;
-    font-family: 'Tenor Sans', sans-serif;
+    font-family: var(--primaryFont);
 }
 
 .homepage-column-one {
@@ -142,4 +144,60 @@ footer {
 
 .homepage-about-us {
     background: url(./assets/images/homepage-about-us-background.svg);
+}
+
+.menupage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-title {
+    font-family: var(--primaryFont);
+    font-size: 30px;                    /*Needs to be standardized*/
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+.menu-desc {
+    font-family: var(--secondaryFont);
+    padding-bottom: 25px;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: 425px 425px;
+    gap: 20px;
+}
+
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    width: 435px;
+    padding-bottom: 20px;
+}
+
+.menu-card-title {
+    font-family: var(--primaryFont);
+    line-height: 30px;
+    font-weight: 400;
+    font-size: 24px;                /*Needs to be standardized*/
+}
+
+.dish {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--secondaryFont);
+    padding-bottom: 10px;
+}
+
+.dish-name {
+    font-size: 14px;                /*Needs to be standardized*/
+    font-weight: 600;
+}
+
+.dish-desc {
+    font-size: 12px;                /*Needs to be standardized*/
 }

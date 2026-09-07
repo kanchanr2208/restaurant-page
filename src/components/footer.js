@@ -3,7 +3,6 @@ import googleIcon from '../assets/images/google-icon.svg';
 import instagramIcon from '../assets/images/instagram-icon.svg';
 
 export function loadFooter() {
-    console.log("Footer Section Loaded")        //Temporary
 
     const footer = document.createElement("footer")
     const footerText = document.createElement("p")
