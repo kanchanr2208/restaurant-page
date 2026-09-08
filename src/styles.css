@@ -47,6 +47,7 @@ header {
     background-size: contain;
     width: 200px;
     height: 70px;
+    cursor: pointer;
 }
 
 nav {

@@ -8,19 +8,47 @@ import {loadFindUsPageContent} from "./components/findUsPageContent.js"
 
 import {loadLandingPage} from "./components/landingPage.js"
 
-// loadHeader();
+loadHeader();
 
 const mainContent = document.createElement("div")
 mainContent.classList.add("main-content")
 mainContent.id = "main-content"
-mainContent.textContent = "Main Content"
-// document.body.append(mainContent)
+document.body.append(mainContent)
 
 // mainContent.append(loadHomepageContent())
 // mainContent.append(loadMenuContent())
 // mainContent.append(loadAboutUs())
 // mainContent.append(loadFindUsPageContent())
 
-// loadFooter();
+loadFooter();
 
-loadLandingPage()
+// loadLandingPage()
+
+/*Event listeners for nav bar buttons*/
+const headerLogo = document.querySelector(".header-logo")
+const navMenu = document.querySelector(".nav-menu")
+const navAboutUs = document.querySelector(".nav-about-us")
+const navFindUs = document.querySelector(".nav-find-us")
+
+headerLogo.addEventListener("click", () => {
+    mainContent.replaceChildren(); 
+    mainContent.append(loadHomepageContent())
+})
+
+navMenu.addEventListener("click", () => {
+    mainContent.replaceChildren();
+    mainContent.append(loadMenuContent())
+})
+
+navAboutUs.addEventListener("click", () => {
+    mainContent.replaceChildren();
+    mainContent.append(loadAboutUs())
+})
+
+navFindUs.addEventListener("click", () => {
+    mainContent.replaceChildren();
+    mainContent.append(loadFindUsPageContent())
+})
+
+
+
