@@ -93,6 +93,7 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
+
 .footer-logos img {
     width: 30px;
 }
@@ -203,26 +204,31 @@ footer {
 }
 
 
-.about-us-container {
+.about-us-container,
+.find-us-container {
     display: grid;
     grid-template-columns: 50% 50%;
     width: 890px;
     margin: 0 auto;
-    height: 500px;
+    height: 100%;
 }
 
 .about-us-card {
     padding-bottom: 30px;
 }
 
-.about-us-card h3 {
+.about-us-card h3,
+.find-us-container h3 {
     font-family: var(--primaryFont);
     font-size: 24px;                /*Needs to be standardized*/
     line-height: 30px;              /*Needs to be standardized*/
+    font-weight: 400;               /*Needs to be standardized*/
 
 }
 
-.about-us-card p {
+.about-us-card p,
+.find-us-container p,
+.find-us-container ul  {
     font-family: var(--secondaryFont);
     font-size: 16px;                /*Needs to be standardized*/
     line-height: 26px;              /*Needs to be standardized*/
@@ -232,4 +238,59 @@ footer {
    display: flex;
    justify-content: center;
    align-items: center;
+}
+
+.find-us-container span {
+    font-weight: 700;
+}
+
+.find-us-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+}
+
+.find-us-text-container h3 {
+    padding-top: 20px;
+}
+
+.find-us-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.find-us-image-container img {
+    height: 100%;
+}
+
+.find-us-socials-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.find-us-socials-section img {
+    width: 30px;
+}
+
+.find-us-socials-images-container {
+    display: flex;
+    gap: 20px;
+}
+
+.landing-page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family:var(--secondaryFont);
+    background: url(./assets/images/landing-page-background.svg);
+    background-size: cover;
 }
