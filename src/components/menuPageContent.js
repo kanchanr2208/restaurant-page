@@ -1,28 +1,33 @@
-import {menuTitleContent, menuDescContent, menuColumnOne, menuColumnTwo} from "/src/data/menuData.js"
+import {titleText, descText, menuColumnOne, menuColumnTwo} from "/src/data/menuData.js"
 import {createMenuColumn} from "./menuColumn.js"
 
 export function loadMenuContent() {
-    const menuPageContainer = document.createElement("div");
-    const menuTitle = document.createElement("h2");
-    const menuDesc = document.createElement("p");
+    const container = document.createElement("div");
+    const title = document.createElement("h2");
+    const desc = document.createElement("p");
+    const header = document.createElement("div");
 
-    const menuContainer = document.createElement("div");
+    const columnContainer = document.createElement("div");
 
-    menuPageContainer.classList.add("menupage-container")
-    menuTitle.classList.add("menu-title")
-    menuDesc.classList.add("menu-desc")
+    container.classList.add("menupage-container")
 
-    menuContainer.classList.add("menu-container")
+    header.classList.add("menu-header")
+    title.classList.add("menu-title")
+    desc.classList.add("menu-desc")
 
-    menuTitle.textContent = menuTitleContent
-    menuDesc.textContent = menuDescContent
+    columnContainer.classList.add("menu-container")
+
+    title.textContent = titleText
+    desc.textContent = descText
+
+    header.append(title, desc)
 
     const menuColOne = createMenuColumn(menuColumnOne)
     const menuColTwo = createMenuColumn(menuColumnTwo)
 
-    menuContainer.append (menuColOne, menuColTwo)
+    columnContainer.append(menuColOne, menuColTwo)
 
-    menuPageContainer.append(menuTitle, menuDesc, menuContainer)
+    container.append(header, columnContainer)
 
-    return menuPageContainer
+    return container
 }

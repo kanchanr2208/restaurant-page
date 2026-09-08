@@ -15,7 +15,7 @@ export function loadHomepageContent() {
     homepageFindUs.textContent = "Find Us"
     homepageAboutUs.textContent = "About Us"
 
-    homepageColumnTwo.append(homepageFindUs, homepageAboutUs)
+    homepageColumnTwo.append(homepageAboutUs, homepageFindUs)
     homepageContainer.append(homepageColumnOne, homepageColumnTwo)
 
     return homepageContainer

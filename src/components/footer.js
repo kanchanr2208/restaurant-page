@@ -39,6 +39,6 @@ export function loadFooter() {
 
     footer.append(footerText, footerLogos)
 
-    document.body.append(footer)
+    return footer
 
 }

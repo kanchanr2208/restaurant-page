@@ -13,7 +13,7 @@ export class AboutUsCard {
         cardContainer.classList.add("about-us-card")
 
         cardTitle.textContent = this.title
-        cardText.textContent = this.text
+        cardText.innerHTML = this.text
 
         cardContainer.append(cardTitle, cardText)
 

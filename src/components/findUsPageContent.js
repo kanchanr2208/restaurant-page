@@ -4,9 +4,9 @@ import instagramIcon from '../assets/images/instagram-icon.svg';
 import findUsImage from '../assets/images/find-us-image.svg'
 
 export function loadFindUsPageContent() {
-    const findUsContainer = document.createElement("div")
-    const findUsTextContainer = document.createElement("div")
-    const findUsImageContainer = document.createElement("div")
+    const container = document.createElement("div")
+    const textContainer = document.createElement("div")
+    const imageContainer = document.createElement("div")
 
     const introPara = document.createElement("p")
     const locHeading = document.createElement("h3")
@@ -31,16 +31,16 @@ export function loadFindUsPageContent() {
 
     const image = document.createElement("img")
 
-    findUsContainer.classList.add("find-us-container")
-    findUsTextContainer.classList.add("find-us-text-container")
-    findUsImageContainer.classList.add("find-us-image-container")
+    container.classList.add("find-us-container")
+    textContainer.classList.add("find-us-text-container")
+    imageContainer.classList.add("find-us-image-container")
     socialsContainer.classList.add("find-us-socials-section")
     socialsImgContainer.classList.add("find-us-socials-images-container")
     google.classList.add("google-logo")
     facebook.classList.add("facebook-logo")
     instagram.classList.add("instagram-logo")
 
-    introPara.textContent = "We look forward to welcoming you at Giordano's. Please reach out to our team for table bookings, private events, or any other inquiries."
+    introPara.innerHTML = "We look forward to welcoming you at <span>Giordano's</span>. Please reach out to our team for table bookings, private events, or any other inquiries."
     locHeading.textContent = "Location & Hours"
     AddressLi.textContent = "Address: Villa 14, 12th Main Road, 4th Block, Koramangala, Bengaluru, Karnataka 560034"
     lunchLi.textContent = "Lunch Service:  Tuesday – Sunday, 12:00 PM – 3:30 PM"
@@ -70,12 +70,12 @@ export function loadFindUsPageContent() {
     socialsContainer.append(socialsHeading, socialsImgContainer)
 
 
-    findUsTextContainer.append(introPara, locHeading, locList, contactHeading, contactList, socialsContainer)
+    textContainer.append(introPara, locHeading, locList, contactHeading, contactList, socialsContainer)
     
     image.src = findUsImage;
-    findUsImageContainer.appendChild(image)
+    imageContainer.appendChild(image)
 
-    findUsContainer.append(findUsTextContainer, findUsImageContainer)
+    container.append(textContainer, imageContainer)
 
-    return findUsContainer
+    return container
 }

@@ -1,12 +1,12 @@
 import {CreateMenuCard} from "./menuCard.js"
 
 export function createMenuColumn(array) {
-    const menuColumn = document.createElement("div")
-    menuColumn.classList.add("menu-col")
+    const column = document.createElement("div")
+    column.classList.add("menu-col")
     array.forEach(item => {
         const courseCard = CreateMenuCard(item)
-        menuColumn.appendChild(courseCard)
+        column.appendChild(courseCard)
     })
 
-    return menuColumn
+    return column
 }

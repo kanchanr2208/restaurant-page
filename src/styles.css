@@ -11,25 +11,35 @@
     --homepage-font: 40px;
     --primaryFont: 'Tenor Sans', sans-serif;
     --secondaryFont: 'Barlow', sans-serif;
+    --h3fontSize: 24px;
+    --textFontSize: 14px;
+    --smallPrintFontSize: 12.5px;
+    --lineHeightSmaller: 26px;
+    --lineHeightBigger: 30px;
+    --normalFontWeight: 400;
+    --semiBoldFontWeight: 600;
 }
 
 @font-face {
   font-family: 'Tenor Sans';
   src: url('./assets/fonts/tenorsans-regular.woff2') format('woff2');
-  font-weight: 400;
+  font-weight: var(--normalFontWeight);
   font-style: normal;
 }
 
 @font-face {
     font-family: 'Barlow';
     src: url(./assets/fonts/barlow-regular.woff2) format(woff2);
-    font-weight: 400;
+    font-weight: var(--normalFontWeight);
     font-style: normal;
 }
 
 body {
     background: url(./assets/images/background.svg);
-    background-size: cover;                 /*Need to correct this*/
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 header {
@@ -44,7 +54,9 @@ header {
 
 .header-logo {
     background: url("./assets/images/logo.svg");
-    background-size: contain;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 200px;
     height: 70px;
     cursor: pointer;
@@ -63,9 +75,16 @@ nav button {
     outline: none;
     text-decoration: none;
     cursor: pointer;
-    font-size: 24px;                /*Need standardized font sizes in variable names*/
+    font-size: var(--h3fontSize);
     font-family: var(--primaryFont);
+    opacity: 0.8;
 }
+
+.active-nav-button {
+    opacity: 1;
+}
+
+
 
 footer {
     width: 100%;
@@ -92,6 +111,18 @@ footer {
     cursor: pointer;
 }
 
+
+.footer-text {
+    font-size: var(--smallPrintFontSize);
+}
+
+.google-logo,
+.facebook-logo,
+.instagram-logo {
+    opacity: 0.7;
+}
+
+
 .main-content {
     height: 560px;
 }
@@ -108,7 +139,9 @@ footer {
 
 .homepage-column-one {
     background: url(./assets/images/homepage-menu-background.svg);
-    background-size: contain;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: var(--border-radius);
     display: flex;
     justify-content: center;
@@ -125,8 +158,8 @@ footer {
 
 .homepage-menu {
     cursor: pointer;
+    transition: transform 0.2s ease;
 }
-
 
 .homepage-find-us,
 .homepage-about-us {
@@ -135,8 +168,11 @@ footer {
     align-items: center;
     font-size: var(--homepage-font);
     border-radius: var(--border-radius);
-    background-size: contain;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
 .homepage-find-us {
@@ -155,10 +191,16 @@ footer {
     height: 100%;
 }
 
+.menu-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .menu-title {
     font-family: var(--primaryFont);
-    font-size: 30px;                    /*Needs to be standardized*/
-    font-weight: 400;
+    font-size: var(--h3fontSize);
+    font-weight: var(--normalFontWeight);
     padding-bottom: 5px;
 }
 
@@ -182,9 +224,9 @@ footer {
 
 .menu-card-title {
     font-family: var(--primaryFont);
-    line-height: 30px;                /*Needs to be standardized*/
-    font-weight: 400;
-    font-size: 24px;                /*Needs to be standardized*/
+    line-height: var(--lineHeightBigger);
+    font-weight: var(--normalFontWeight);
+    font-size: var(--h3fontSize);
 }
 
 .dish {
@@ -195,12 +237,12 @@ footer {
 }
 
 .dish-name {
-    font-size: 14px;                /*Needs to be standardized*/
-    font-weight: 600;
+    font-size: var(--textFontSize);
+    font-weight: var(--semiBoldFontWeight);
 }
 
 .dish-desc {
-    font-size: 12px;                /*Needs to be standardized*/
+    font-size: var(--smallPrintFontSize);
 }
 
 
@@ -208,6 +250,7 @@ footer {
 .find-us-container {
     display: grid;
     grid-template-columns: 50% 50%;
+    align-items: start;
     width: 890px;
     margin: 0 auto;
     height: 100%;
@@ -220,9 +263,9 @@ footer {
 .about-us-card h3,
 .find-us-container h3 {
     font-family: var(--primaryFont);
-    font-size: 24px;                /*Needs to be standardized*/
-    line-height: 30px;              /*Needs to be standardized*/
-    font-weight: 400;               /*Needs to be standardized*/
+    font-size: var(--h3fontSize);
+    line-height: var(--lineHeightBigger);
+    font-weight: var(--normalFontWeight);
 
 }
 
@@ -230,8 +273,8 @@ footer {
 .find-us-container p,
 .find-us-container ul  {
     font-family: var(--secondaryFont);
-    font-size: 16px;                /*Needs to be standardized*/
-    line-height: 26px;              /*Needs to be standardized*/
+    font-size: var(--textFontSize);
+    line-height: var(--lineHeightSmaller);
 }
 
 .about-us-image {
@@ -240,8 +283,8 @@ footer {
    align-items: center;
 }
 
-.find-us-container span {
-    font-weight: 700;
+span {
+    font-weight: var(--semiBoldFontWeight);
 }
 
 .find-us-text-container {
@@ -293,5 +336,57 @@ footer {
     height: 100vh;
     font-family:var(--secondaryFont);
     background: url(./assets/images/landing-page-background.svg);
-    background-size: cover;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;                 /*for the fade out effect */
+    transition: opacity 0.8s ease;
+}
+
+/*Animations section. Code mostly taken from Gemini*/
+
+/*Fading out of landingpage.*/
+.fade-out {
+    opacity: 0;
+}
+
+/*Sections sliding in and out ↓*/
+.animate-slide {
+    transition: transform 0.8s ease, opacity 0.8s ease, color 0.3s ease;
+    opacity: 0;
+}
+
+.start-top { transform: translateY(-100%); }
+.start-bottom { transform: translateY(100%); }
+.start-left { transform: translateX(-100vw); }
+.start-right { transform: translateX(100vw); }
+
+
+.slide-in {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.homepage-find-us,
+.homepage-about-us {
+    transition: color 0.3s ease;
+}
+
+.homepage-menu:hover,
+.homepage-about-us:hover, 
+.homepage-find-us:hover {
+    color: #FD7E3D;
+}
+
+.google-logo:hover,
+.facebook-logo:hover, 
+.instagram-logo:hover, 
+.google-logo:active,
+.facebook-logo:active,
+.instagram-logo:active {
+    opacity: 1;
+}
+
+nav button:hover {
+    opacity: 1;
 }

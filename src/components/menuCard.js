@@ -1,22 +1,22 @@
 import { Dish } from "./dish.js"
 
 export function CreateMenuCard(courseObject) {
-    const menuCard = document.createElement("div")
-    const menuCardTitle = document.createElement("h3")
+    const card = document.createElement("div")
+    const title = document.createElement("h3")
 
-    menuCard.classList.add("menu-card")
-    menuCardTitle.classList.add("menu-card-title")
+    card.classList.add("menu-card")
+    title.classList.add("menu-card-title")
 
-    menuCardTitle.textContent = courseObject.course
+    title.textContent = courseObject.course
 
-    menuCard.append(menuCardTitle)
+    card.append(title)
 
     const dishes = courseObject.dishes;
     dishes.forEach(dish => {
         let newDish = new Dish(dish.name, dish.desc)
         let newDishDOMElement = newDish.createDishDOM()
-        menuCard.append(newDishDOMElement)
+        card.append(newDishDOMElement)
     });
 
-    return menuCard
+    return card
 }

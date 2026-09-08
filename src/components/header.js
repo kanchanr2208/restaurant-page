@@ -20,5 +20,5 @@ export function loadHeader() {
     navbar.append(menuButton, aboutUsButton, findUsButton)
     header.append(logo, navbar)
 
-    document.body.append(header)
+    return header
 }

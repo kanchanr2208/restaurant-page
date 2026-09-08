@@ -1,5 +1,5 @@
-export const menuTitleContent = "September Tasting Collection"
-export const menuDescContent = "Our menu evolves monthly to reflect the finest seasonal yields, merging deep Italian heritage with focused modern technique."
+export const titleText = "September Tasting Collection"
+export const descText = "Our menu evolves monthly to reflect the finest seasonal yields, merging deep Italian heritage with focused modern technique."
 
 export const menuColumnOne = [
     {
