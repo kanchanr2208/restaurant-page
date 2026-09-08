@@ -1,4 +1,4 @@
-import image from "../assets/images/about-us-image.svg"
+import image from "../assets/images/about-us-image.jpg"
 import { AboutUsCard } from "./aboutUsCard.js"
 import {cardContent} from "../data/aboutUsData.js"
 

@@ -35,7 +35,7 @@
 }
 
 body {
-    background: url(./assets/images/background.svg);
+    background: url(./assets/images/background.jpg);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -60,6 +60,7 @@ header {
     width: 200px;
     height: 70px;
     cursor: pointer;
+    border-radius: var(--border-radius);
 }
 
 nav {
@@ -138,7 +139,7 @@ footer {
 }
 
 .homepage-column-one {
-    background: url(./assets/images/homepage-menu-background.svg);
+    background: url(./assets/images/homepage-menu-background.jpg);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -176,11 +177,11 @@ footer {
 }
 
 .homepage-find-us {
-    background: url(./assets/images/homepage-find-us-background.svg);
+    background: url(./assets/images/homepage-find-us-background.jpg);
 }
 
 .homepage-about-us {
-    background: url(./assets/images/homepage-about-us-background.svg);
+    background: url(./assets/images/homepage-about-us-background.jpg);
 }
 
 .menupage-container {
@@ -283,6 +284,10 @@ footer {
    align-items: center;
 }
 
+.about-us-image img {
+    border-radius: var(--border-radius);
+}
+
 span {
     font-weight: var(--semiBoldFontWeight);
 }
@@ -306,6 +311,7 @@ span {
 
 .find-us-image-container img {
     height: 100%;
+    border-radius: var(--border-radius);
 }
 
 .find-us-socials-section {
@@ -335,12 +341,16 @@ span {
     align-items: center;
     height: 100vh;
     font-family:var(--secondaryFont);
-    background: url(./assets/images/landing-page-background.svg);
+    background: url(./assets/images/landing-page-background.jpg);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 1;                 /*for the fade out effect */
     transition: opacity 0.8s ease;
+}
+
+.landing-page-image img {
+    border-radius: 1000px;
 }
 
 /*Animations section. Code mostly taken from Gemini*/

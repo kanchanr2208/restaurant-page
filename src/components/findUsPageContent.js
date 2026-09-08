@@ -1,7 +1,7 @@
 import facebookIcon from '../assets/images/facebook-icon.svg';
 import googleIcon from '../assets/images/google-icon.svg';
 import instagramIcon from '../assets/images/instagram-icon.svg';
-import findUsImage from '../assets/images/find-us-image.svg'
+import findUsImage from '../assets/images/find-us-image.jpg'
 
 export function loadFindUsPageContent() {
     const container = document.createElement("div")
