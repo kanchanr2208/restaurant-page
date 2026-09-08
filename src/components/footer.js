@@ -8,9 +8,9 @@ export function loadFooter() {
     const footerText = document.createElement("p")
     const footerLogos = document.createElement("div")
 
-    const facebookLogoContainer = document.createElement("button")
-    const googleLogoContainer = document.createElement("button")
-    const instagramLogoContainer = document.createElement("button")
+    // const facebookLogoContainer = document.createElement("button")
+    // const googleLogoContainer = document.createElement("button")
+    // const instagramLogoContainer = document.createElement("button")
 
     const facebookLogo = document.createElement("img")
     const googleLogo = document.createElement("img")
@@ -22,21 +22,20 @@ export function loadFooter() {
     facebookLogo.alt = "Facebook Icon"
     googleLogo.alt = "Google Icon"
     instagramLogo.alt = "Instagram Icon"
+    
     footerText.textContent = "© 2026 Giordano's - All Rights Reserved"
 
-    facebookLogoContainer.classList.add("facebook-logo")
-    googleLogoContainer.classList.add("google-logo")
-    instagramLogoContainer.classList.add("instagram-logo")
+    facebookLogo.classList.add("facebook-logo")
+    googleLogo.classList.add("google-logo")
+    instagramLogo.classList.add("instagram-logo")
+    
 
     footerLogos.classList.add("footer-logos")
     footerText.classList.add("footer-text")
     footer.classList.add("footer")
 
-    facebookLogoContainer.appendChild(facebookLogo)
-    googleLogoContainer.appendChild(googleLogo)
-    instagramLogoContainer.appendChild(instagramLogo)
 
-    footerLogos.append(facebookLogoContainer, googleLogoContainer, instagramLogoContainer)
+    footerLogos.append(googleLogo, facebookLogo, instagramLogo)
 
     footer.append(footerText, footerLogos)
 

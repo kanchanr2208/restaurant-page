@@ -8,69 +8,114 @@ import {loadFindUsPageContent} from "./components/findUsPageContent.js"
 
 import {loadLandingPage} from "./components/landingPage.js"
 
-loadHeader();
+loadLandingPage()
 
-const mainContent = document.createElement("div")
-mainContent.classList.add("main-content")
-mainContent.id = "main-content"
-document.body.append(mainContent)
+// loadHeader();
+// handleNavbarClickEvents()
 
-// mainContent.append(loadHomepageContent())
-// mainContent.append(loadMenuContent())
-// mainContent.append(loadAboutUs())
-// mainContent.append(loadFindUsPageContent())
+// const mainContent = document.createElement("div")
+// mainContent.classList.add("main-content")
+// mainContent.id = "main-content"
+// document.body.append(mainContent)
+// handleMainContentClickEvents()
 
-loadFooter();
 
-// loadLandingPage()
+// loadFooter()
+// handleFooterClickEvents()
+
 
 /*Event listeners for nav bar buttons*/
-const headerLogo = document.querySelector(".header-logo")
-const navMenu = document.querySelector(".nav-menu")
-const navAboutUs = document.querySelector(".nav-about-us")
-const navFindUs = document.querySelector(".nav-find-us")
+function handleNavbarClickEvents() {
+    const headerLogo = document.querySelector(".header-logo")
+    const navMenu = document.querySelector(".nav-menu")
+    const navAboutUs = document.querySelector(".nav-about-us")
+    const navFindUs = document.querySelector(".nav-find-us")
 
-headerLogo.addEventListener("click", () => {
-    mainContent.replaceChildren(); 
-    mainContent.append(loadHomepageContent())
-})
+    headerLogo.addEventListener("click", () => {
+        openHome()
+    })
 
-navMenu.addEventListener("click", () => {
-    mainContent.replaceChildren();
-    mainContent.append(loadMenuContent())
-})
+    navMenu.addEventListener("click", () => {
+        openMenu()
+    })
 
-navAboutUs.addEventListener("click", () => {
-    mainContent.replaceChildren();
-    mainContent.append(loadAboutUs())
-})
+    navAboutUs.addEventListener("click", () => {
+        openAboutUs()
+    })
 
-navFindUs.addEventListener("click", () => {
-    mainContent.replaceChildren();
-    mainContent.append(loadFindUsPageContent())
-})
+    navFindUs.addEventListener("click", () => {
+        openFindUs()
+    })
 
-/*Event Listeners for footer: social links*/
-
-function openSocialLink(url) {
-    window.open(url, "_blank")
 }
 
-const footerFacebook = document.querySelector(".facebook-logo")
-const footerGoogle = document.querySelector(".google-logo")
-const footerInstagram = document.querySelector(".instagram-logo")
+/*Event Listeners for footer: social links*/
+function handleFooterClickEvents() {
+    const footer = document.querySelector(".footer")
 
-footerFacebook.addEventListener("click", () => {
-    openSocialLink("https://www.facebook.com/")
-})
+    /*socal buttons */
+    footer.addEventListener("click", (e) => {
+        
+        if(e.target.classList.contains("google-logo")) {                
+            openExternalLinkInNewTab("https://www.google.com/")
+            console.log("google clicked")
 
-footerGoogle.addEventListener("click", () => {
-    openSocialLink("https://www.google.com/")
-})
+        } else if(e.target.classList.contains("facebook-logo")) {
+            openExternalLinkInNewTab("https://www.facebook.com/")
+            console.log("facebook clicked")
+            
+        } else if(e.target.classList.contains("instagram-logo")) {
+            openExternalLinkInNewTab("https://www.instagram.com/")
+            console.log("instagram clicked")
+        }
+    })
+}
 
-footerInstagram.addEventListener("click", () => {
-    openSocialLink("https://www.instagram.com/")
-})
+/*Event Listeners to Main Content Div section */
+function handleMainContentClickEvents() {
+    mainContent.addEventListener("click", (e) => {
+        /*Homepage buttons */
+        if (e.target.classList.contains("homepage-menu")) {
+            openMenu()
+        } else if(e.target.classList.contains("homepage-about-us")) {
+            openAboutUs()
 
+        } else if(e.target.classList.contains("homepage-find-us")) {
+            openFindUs()
+        } else if(e.target.classList.contains("google-logo")) {                /*find us socal buttons */
+            openExternalLinkInNewTab("https://www.google.com/")
 
+        } else if(e.target.classList.contains("facebook-logo")) {
+            openExternalLinkInNewTab("https://www.facebook.com/")
+            
+        } else if(e.target.classList.contains("instagram-logo")) {
+            openExternalLinkInNewTab("https://www.instagram.com/")
+        }
 
+    })
+
+}
+
+function openHome() {
+    mainContent.replaceChildren()
+    mainContent.append(loadHomepageContent())
+}
+
+function openMenu() {
+    mainContent.replaceChildren()
+    mainContent.append(loadMenuContent())
+}
+
+function openAboutUs() {
+    mainContent.replaceChildren()
+    mainContent.append(loadAboutUs())
+}
+
+function openFindUs() {
+    mainContent.replaceChildren()
+    mainContent.append(loadFindUsPageContent())
+}
+
+function openExternalLinkInNewTab(url) {
+    window.open(url, "_blank")
+}

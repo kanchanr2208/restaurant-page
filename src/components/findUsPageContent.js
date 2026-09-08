@@ -36,6 +36,9 @@ export function loadFindUsPageContent() {
     findUsImageContainer.classList.add("find-us-image-container")
     socialsContainer.classList.add("find-us-socials-section")
     socialsImgContainer.classList.add("find-us-socials-images-container")
+    google.classList.add("google-logo")
+    facebook.classList.add("facebook-logo")
+    instagram.classList.add("instagram-logo")
 
     introPara.textContent = "We look forward to welcoming you at Giordano's. Please reach out to our team for table bookings, private events, or any other inquiries."
     locHeading.textContent = "Location & Hours"
@@ -56,6 +59,11 @@ export function loadFindUsPageContent() {
     google.src = googleIcon
     facebook.src = facebookIcon
     instagram.src = instagramIcon
+
+    google.alt = "Google Icon"
+    facebook.alt = "Facebook Icon"
+    instagram.alt = "Instagram Icon"
+
     socialsHeading.textContent = "Follow Us:"
 
     socialsImgContainer.append(google, facebook, instagram)

@@ -87,16 +87,9 @@ footer {
     right: 30px;
 }
 
-.footer-logos button {
-    background: none;
-    border: none;
-    outline: none;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 .footer-logos img {
     width: 30px;
+    cursor: pointer;
 }
 
 .main-content {
@@ -130,6 +123,11 @@ footer {
     height: 500px;
 }
 
+.homepage-menu {
+    cursor: pointer;
+}
+
+
 .homepage-find-us,
 .homepage-about-us {
     display: flex;
@@ -138,6 +136,7 @@ footer {
     font-size: var(--homepage-font);
     border-radius: var(--border-radius);
     background-size: contain;
+    cursor: pointer;
 }
 
 .homepage-find-us {
@@ -277,6 +276,7 @@ footer {
 
 .find-us-socials-section img {
     width: 30px;
+    cursor: pointer;
 }
 
 .find-us-socials-images-container {
