@@ -50,5 +50,27 @@ navFindUs.addEventListener("click", () => {
     mainContent.append(loadFindUsPageContent())
 })
 
+/*Event Listeners for footer: social links*/
+
+function openSocialLink(url) {
+    window.open(url, "_blank")
+}
+
+const footerFacebook = document.querySelector(".facebook-logo")
+const footerGoogle = document.querySelector(".google-logo")
+const footerInstagram = document.querySelector(".instagram-logo")
+
+footerFacebook.addEventListener("click", () => {
+    openSocialLink("https://www.facebook.com/")
+})
+
+footerGoogle.addEventListener("click", () => {
+    openSocialLink("https://www.google.com/")
+})
+
+footerInstagram.addEventListener("click", () => {
+    openSocialLink("https://www.instagram.com/")
+})
+
 
 
